@@ -7,6 +7,7 @@ This was a group project, completed with [Xeska](https://github.com/Xeska).
 ## Getting Started
 
 ```
+git submodule init
 git submodule update --remote --merge
 ```
 To get the latest version of the [libft library](https://github.com/anaiel/libft). Then run the command `make` to create the **fillit** executable.
