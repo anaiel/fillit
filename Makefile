@@ -6,7 +6,7 @@
 #    By: dtrigalo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/28 09:14:19 by dtrigalo          #+#    #+#              #
-#    Updated: 2018/11/29 09:00:46 by anleclab         ###   ########.fr        #
+#    Updated: 2018/12/20 09:25:36 by anleclab         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,10 @@ SRCS = check_legal_test_file.c \
 	   main.c
 OBJ = $(SRCS:.c=.o)
 HEADERS = fillit.h
+GREEN = 
 
 all: $(NAME)
+	@echo "\033[0;32mfillit executable was created successfully"
 
 %.o: %.c
 	@gcc -g -o $@ -c $< $(CFLAGS)
