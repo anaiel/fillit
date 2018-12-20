@@ -2,11 +2,14 @@
 
 This project was completed in december 2018 as part of the 42 school cursus. The instructions were to create a program that could arrange a set of 1 to 26 tetriminos in the smallest square possible and print the result. The complete instructions can be found [here](https://github.com/fpetras/42-subjects/blob/master/fillit.en.pdf).
 
-This was a group project, completed with [Xeska](https://github.com/Xeska)
+This was a group project, completed with [Xeska](https://github.com/Xeska).
 
 ## Getting Started
 
-Run the command `make` to create the **fillit** executable.
+```
+git submodule update --remote --merge
+```
+To get the latest version of the [libft library](https://github.com/anaiel/libft). Then run the command `make` to create the **fillit** executable.
 
 ## Running the tests
 
