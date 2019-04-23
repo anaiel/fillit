@@ -6,14 +6,19 @@
 /*   By: dtrigalo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 12:53:53 by dtrigalo          #+#    #+#             */
-/*   Updated: 2018/11/28 16:26:06 by dtrigalo         ###   ########.fr       */
+/*   Updated: 2019/04/23 13:29:27 by anleclab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FILLIT_H
 # define FILLIT_H
 
-# define BUFF_SIZE 777
+# include "libft.h"
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+
+# define F_BUFF_SIZE 4096
 
 typedef struct	s_point
 {

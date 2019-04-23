@@ -6,13 +6,11 @@
 /*   By: dtrigalo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 12:52:44 by dtrigalo          #+#    #+#             */
-/*   Updated: 2018/11/28 16:22:56 by dtrigalo         ###   ########.fr       */
+/*   Updated: 2019/04/23 13:20:05 by anleclab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-#include "libft/libft.h"
-#include <stdlib.h>
 
 static char	**initialize_sol(int sqsize)
 {

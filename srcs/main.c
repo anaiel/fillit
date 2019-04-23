@@ -6,13 +6,11 @@
 /*   By: dtrigalo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 12:54:27 by dtrigalo          #+#    #+#             */
-/*   Updated: 2018/11/29 09:24:25 by anleclab         ###   ########.fr       */
+/*   Updated: 2019/04/23 13:33:24 by anleclab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-#include "libft/libft.h"
-#include <stdlib.h>
 
 static void	end_program_final(char *tet, t_point **ttmns, int tet_nbr,
 		int success)
@@ -54,6 +52,9 @@ int			main(int ac, char **av)
 	char	**solution;
 	t_point	**ttmns;
 
+	tet = NULL;
+	solution = NULL;
+	ttmns = NULL;
 	if (ac != 2)
 		end_program_err_arg();
 	if ((ac = ft_open_file(av[1])) == -1

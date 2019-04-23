@@ -6,12 +6,11 @@
 /*   By: dtrigalo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 14:03:19 by dtrigalo          #+#    #+#             */
-/*   Updated: 2018/11/28 16:25:33 by dtrigalo         ###   ########.fr       */
+/*   Updated: 2019/04/23 13:19:21 by anleclab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-#include <stdlib.h>
 
 static int		get_tet_coords(t_point *ttmn, char *str)
 {

@@ -6,41 +6,69 @@
 #    By: dtrigalo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/28 09:14:19 by dtrigalo          #+#    #+#              #
-#    Updated: 2018/12/20 09:25:36 by anleclab         ###   ########.fr        #
+#    Updated: 2019/04/23 13:33:38 by anleclab         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fillit
-FLAGS = -Wall -Werror -Wextra
-SRCS = check_legal_test_file.c \
-	   open_read.c \
-	   get_tet.c \
-	   solver.c \
-	   print_map.c \
-	   uproundsqrt.c \
-	   main.c
-OBJ = $(SRCS:.c=.o)
-HEADERS = fillit.h
-GREEN = 
 
-all: $(NAME)
-	@echo "\033[0;32mfillit executable was created successfully"
+CFLAGS = -Wall -Wextra -Werror
+SRC = main.c \
+	  check_legal_test_file.c \
+	  get_tet.c \
+	  open_read.c \
+	  print_map.c \
+	  solver.c \
+	  uproundsqrt.c
+SRCSFD = srcs/
+OBJSFD = objs/
+OBJS = $(addprefix $(OBJSFD),$(SRC:.c=.o))
 
-%.o: %.c
-	@gcc -g -o $@ -c $< $(CFLAGS)
+HDR = fillit.h
+HDRSFD = includes/
+HDRS = $(addprefix $(HDRSFD),$(HDR))
 
-$(NAME): $(OBJ)
-	@make -C ./libft
-	@gcc $(OBJ) -o $(NAME) -Llibft -lft -I$(HEADERS)
+HDR_INC = -I./includes
+LIBFT_HDR = -I./libft/includes
+LIB_BINARY = -L./libft -lft
+LIBFT= libft/libft.a
+
+RED = \033[0;31m
+GREEN = \033[0;32m
+NONE = \033[0m
+
+all: check_libft project $(NAME) $(HDRS)
+	@echo "Project ready"
+
+$(NAME): $(OBJSFD) $(OBJS) $(LIBFT) $(HDRS)
+	@gcc $(CFLAGS) $(OBJS) $(LIB_BINARY) -o $@
+	@echo "\t[ \033[0;32m✔\033[0m ] $(NAME) executable"
+
+check_libft:
+	@echo "Checking libft..."
+	@make -C libft
+
+project:
+	@echo "Checking project..."
+
+$(OBJSFD):
+	@mkdir $@
+	@echo "\t[ $(GREEN)✔$(NONE) ] $(OBJSFD) directory"
+
+$(OBJSFD)%.o: $(SRCSFD)%.c $(HDRS) $(LIBFT)
+	@gcc $(CFLAGS) $(HDR_INC) $(LIBFT_HDR) -c $< -o $@
+	@echo "\t[ $(GREEN)✔$(NONE) ] $@ object"
 
 clean:
-	@/bin/rm -f $(OBJ)
+	@/bin/rm -rf $(OBJSFD)
+	@echo "\t[ $(RED)✗$(NONE) ] $(OBJSFD) directory"
 	@make -C ./libft clean
 
 fclean: clean
-	@/bin/rm -f $(NAME)
+	@/bin/rm -f $(NAME) visualizer
+	@echo "\t[ $(RED)✗$(NONE) ] $(NAME) executable"
 	@make -C ./libft fclean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: check_libft project clean fclean re

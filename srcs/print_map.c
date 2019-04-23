@@ -6,13 +6,11 @@
 /*   By: dtrigalo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 12:54:14 by dtrigalo          #+#    #+#             */
-/*   Updated: 2018/11/28 16:35:10 by dtrigalo         ###   ########.fr       */
+/*   Updated: 2019/04/23 13:20:00 by anleclab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-#include "libft/libft.h"
-#include <stdlib.h>
 
 static void		free_map(char **map)
 {
