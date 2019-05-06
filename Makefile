@@ -65,7 +65,7 @@ clean:
 	@make -C ./libft clean
 
 fclean: clean
-	@/bin/rm -f $(NAME) visualizer
+	@/bin/rm -f $(NAME)
 	@echo "\t[ $(RED)✗$(NONE) ] $(NAME) executable"
 	@make -C ./libft fclean
 
