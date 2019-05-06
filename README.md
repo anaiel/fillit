@@ -20,6 +20,7 @@ In order to find the disposition of tetriminos that gives the smallest square, o
 2. Places the first tetrimino in the top-left-most position.
 3. Tries to place the second tetrimino in the top-left-most position, and if the position in invalid, moves it to the right, and then down when the end of the line is reached.
 4. When a valid position, it tries to position the third tetrimino in the same fashion.
+
 In the end, either it will no be possible to find a valid position for the next tetrimino, or there will be no tetrimino left. In this last case, the smallest square was found, and the algorithm ends.
 In the first case, the algorithm uses **backtracking** to try a different position for the previous tetrimino, backtracking as far as necessary to either find a solution or try every possible combination. If no combination was found, the size of the square is incremented by 1 and the same process starts over.
 
