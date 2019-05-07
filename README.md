@@ -2,7 +2,7 @@
 
 This project was completed in december 2018 as part of the 42 school cursus. The instructions were to create a program that could arrange a set of 1 to 26 tetriminos in the smallest square possible and print the result. The complete instructions can be found in the *resources* folder.
 
-This was a group project, completed with [Xeska](https://github.com/Xeska).
+🍌 This was a group project, completed with [Xeska](https://github.com/Xeska).
 
 ![path to libft](https://i.imgur.com/DerL6nT.png "Cursus start > 42 Commandements > Piscine Reloaded > Libft > Get_Next_Line > Fillit")
 
@@ -110,7 +110,8 @@ EGGHHF
 
 ## Authors
 
+Team Unbananable:
 * **[anaiel](https://github.com/anaiel)**
-* [Xeska](https://github.com/Xeska)
+* **[Xeska](https://github.com/Xeska)**
 
 <img align="right" src="https://i.imgur.com/hReuUFV.png" />
