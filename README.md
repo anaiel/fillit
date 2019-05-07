@@ -4,7 +4,7 @@ This project was completed in december 2018 as part of the 42 school cursus. The
 
 🍌 This was a group project, completed with [Xeska](https://github.com/Xeska).
 
-![path to libft](https://i.imgur.com/DerL6nT.png "Cursus start > 42 Commandements > Piscine Reloaded > Libft > Get_Next_Line > Fillit")
+![path to fillit](https://i.imgur.com/b0dXXwo.png "Cursus start > 42 Commandements > Piscine Reloaded > Libft > Get_Next_Line > Fillit")
 
 *Basic algorithms, input/output*
 
@@ -110,7 +110,7 @@ EGGHHF
 
 ## Authors
 
-Team Unbananable:
+🍌Team Unbananable:
 * **[anaiel](https://github.com/anaiel)**
 * **[Xeska](https://github.com/Xeska)**
 
