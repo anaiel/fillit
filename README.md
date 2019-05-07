@@ -91,21 +91,21 @@ error
 
 ```
 $> ./fillit resources/valid_files/test1
-AA.EE
-AA.EC
-DDDEC
-BBD.C
-.BB.C
+AAAAB.
+CCCDBB
+FC.D.B
+F.DDGG
+F.EGG.
+FEEE..
 ```
 
 ```
 $> ./fillit resources/valid_files/test2
-AABBBB
-AADD.C
-.E.DDC
-EEHHCC
-EGGHHF
-.GGFFF
+AAAA.
+BB.C.
+.BBC.
+DD.CC
+DD...
 ```
 
 ## Authors
